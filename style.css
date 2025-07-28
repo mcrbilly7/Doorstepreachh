@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #0d0d0d;
+  background: #0a0a0a;
   color: #fff;
 }
 
@@ -10,93 +10,96 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #121212;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  background: #111;
+  border-bottom: 1px solid #222;
 }
 
 .navbar .logo {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .navbar nav a {
-  margin-left: 2rem;
+  margin-left: 1.5rem;
   color: #bbb;
   text-decoration: none;
   font-weight: 500;
 }
+
 .navbar nav a:hover {
   color: #fff;
 }
 
 .hero {
+  background-image: url('https://images.unsplash.com/photo-1588776814546-bcdb5a6f7f46?fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
   position: relative;
-  height: 80vh;
-  background: url('https://images.unsplash.com/photo-1588776814546-bcdb5a6f7f46?fit=crop&w=1200&q=80') center/cover no-repeat;
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
 
-.hero-overlay {
+.hero::after {
+  content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 1;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
+  text-align: center;
 }
 
 .hero-content h2 {
   font-size: 2.5rem;
   font-weight: 800;
-  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  margin-bottom: 2rem;
 }
 
 .buttons {
   display: flex;
-  justify-content: center;
   gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .btn {
   padding: 0.75rem 1.5rem;
-  border-radius: 12px;
+  border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
   transition: 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 .primary {
-  background-color: #2563eb;
+  background: #1d4ed8;
   color: #fff;
-  box-shadow: 0 0 15px #2563ebaa;
 }
 
 .primary:hover {
-  background-color: #1e40af;
+  background: #2563eb;
 }
 
 .secondary {
-  background-color: #222;
-  color: #eee;
-  border: 1px solid #555;
+  background: #fff;
+  color: #111;
 }
 
 .secondary:hover {
-  background-color: #333;
+  background: #f3f3f3;
 }
 
 .how-it-works {
-  padding: 4rem 2rem;
-  background: #111;
+  padding: 3rem 2rem;
+  background: #0e0e0e;
   text-align: center;
 }
 
@@ -114,7 +117,6 @@ body {
 
 .step {
   max-width: 250px;
-  padding: 1rem;
 }
 
 .step img {
@@ -132,7 +134,7 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 1rem 0;
-  background: #121212;
+  background: #111;
   border-top: 1px solid #222;
   position: fixed;
   bottom: 0;
@@ -140,7 +142,7 @@ body {
 }
 
 .bottom-nav a {
-  color: #bbb;
+  color: #aaa;
   font-size: 0.95rem;
   text-decoration: none;
 }
