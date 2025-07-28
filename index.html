@@ -2,275 +2,265 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Doorstep Reach</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #111;
-      color: #fff;
+      font-family: 'Inter', sans-serif;
+      background-color: #0f0f0f;
+      color: #ffffff;
     }
 
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 16px 32px;
-      background-color: #000;
-      border-bottom: 1px solid #222;
+      padding: 20px 32px;
+      background-color: #121212;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 
-    header .logo {
-      font-weight: bold;
-      font-size: 20px;
+    header h1 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #00d26a;
       display: flex;
       align-items: center;
       gap: 8px;
     }
 
     nav a {
-      margin: 0 10px;
-      text-decoration: none;
+      margin-left: 20px;
       color: #ccc;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
       color: #fff;
     }
 
-    .language-select {
-      background-color: #222;
-      color: white;
+    .language {
+      background: #222;
       border: none;
-      padding: 4px 8px;
-      border-radius: 4px;
-      margin-left: 10px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: white;
+      margin-left: 20px;
     }
 
     .hero {
       text-align: center;
-      padding: 60px 20px;
+      padding: 60px 20px 40px;
     }
 
     .hero img {
-      width: 240px;
-      border-radius: 12px;
-      margin-bottom: 24px;
+      width: 250px;
+      border-radius: 10px;
+      margin-bottom: 15px;
     }
 
-    .hero h1 {
+    .hero h2 {
       font-size: 32px;
-      margin: 0 0 12px;
+      font-weight: 800;
+      margin: 10px 0;
     }
 
     .hero p {
-      color: #aaa;
-      margin-bottom: 20px;
+      color: #bbb;
+      font-size: 16px;
+      margin-bottom: 30px;
     }
 
     .hero button {
       padding: 12px 24px;
-      margin: 5px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
       font-size: 16px;
-    }
-
-    .get-started {
-      background-color: #3b82f6;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      background-color: #007bff;
       color: white;
+      transition: background-color 0.3s;
     }
 
-    .how-it-works {
+    .hero button:hover {
+      background-color: #0056c9;
+    }
+
+    .section-title {
+      font-size: 26px;
+      font-weight: 700;
       text-align: center;
-      padding: 40px 20px;
+      margin: 40px 0 20px;
     }
 
-    .how-it-works h2 {
+    .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 0 20px;
+    }
+
+    .feature-card {
+      background-color: #1b1b1b;
+      padding: 20px;
+      border-radius: 12px;
+      width: 280px;
+      margin: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255,255,255,0.03);
+    }
+
+    .feature-card h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #00ccff;
+    }
+
+    .feature-card p {
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .upload-box {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .upload-box input[type="file"] {
+      background: #222;
+      padding: 10px;
+      border: 2px dashed #444;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .testimonials {
+      padding: 40px 20px;
+      background-color: #111;
+      text-align: center;
+    }
+
+    .testimonials h3 {
+      font-size: 22px;
       margin-bottom: 20px;
     }
 
-    .step {
-      background: #1a1a1a;
-      margin: 20px auto;
-      padding: 20px;
-      max-width: 500px;
-      border-radius: 10px;
-      text-align: left;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    .testimonial {
+      font-style: italic;
+      margin: 10px 0;
+      color: #ccc;
     }
 
-    .step h3 {
-      margin-top: 0;
-    }
-
-    .file-upload input {
-      margin-top: 8px;
-      padding: 6px;
-      background: #222;
-      border: 1px solid #555;
-      color: #fff;
-      width: 100%;
-    }
-
-    .map-container {
-      background: #1c1c1c;
-      text-align: center;
+    .map-placeholder {
+      margin: 40px 0;
       padding: 30px;
-      margin: 40px 20px;
+      background: #191919;
       border-radius: 12px;
-      font-size: 18px;
-      border: 1px solid #444;
+      text-align: center;
+      font-size: 16px;
+      color: #aaa;
     }
 
     footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #000;
-      border-top: 1px solid #222;
+      display: flex;
+      justify-content: space-around;
+      padding: 30px 10px;
+      background-color: #0a0a0a;
+      font-size: 14px;
       color: #888;
+    }
+
+    footer div {
+      text-align: center;
+    }
+
+    @media screen and (max-width: 768px) {
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .feature-card {
+        width: 90%;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="logo">📬 Doorstep Reach</div>
+    <h1>📬 Doorstep Reach</h1>
     <nav>
       <a href="#">Home</a>
       <a href="#">How It Works</a>
       <a href="#">For Businesses</a>
       <a href="#">For Steppers</a>
       <a href="#">Contact</a>
-      <select class="language-select">
-        <option value="en">🇺🇸 EN</option>
-        <option value="es">🇪🇸 ES</option>
+      <select class="language">
+        <option>🇺🇸 EN</option>
+        <option>🇪🇸 ES</option>
       </select>
     </nav>
   </header>
 
-  <section class="hero">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Delivery_man.jpg/640px-Delivery_man.jpg" alt="Delivery Man"/>
-    <h1>Get Flyers Delivered to Every Door</h1>
+  <div class="hero">
+    <img src="https://cdn.openai.com/chatgpt/doorstep_delivery_man.png" alt="Delivery Man">
+    <h2>Get Flyers Delivered to Every Door</h2>
     <p>Affordable, photo-confirmed flyer drops across Dallas neighborhoods.</p>
-    <button class="get-started">🚀 Get Started</button>
-  </section>
+    <button>🚀 Get Started</button>
+  </div>
 
-  <section class="how-it-works">
-    <h2>How It Works</h2>
-
-    <div class="step">
-      <h3>📤 1. Upload Flyers</h3>
-      <p>Send your design or let us print them for you.</p>
-      <div class="file-upload">
-        <input type="file"/>
-      </div>
+  <h2 class="section-title">How It Works</h2>
+  <div class="features">
+    <div class="feature-card">
+      <h3>📤 Upload Flyers</h3>
+      <p>Send your designs or we can print and prep them for you.</p>
     </div>
-
-    <div class="step">
-      <h3>🚪 2. Steppers Deliver</h3>
-      <p>Flyers delivered door-to-door in your selected area.</p>
+    <div class="feature-card">
+      <h3>🚪 Steppers Deliver</h3>
+      <p>Flyers dropped door-to-door in your selected area.</p>
     </div>
-
-    <div class="step">
-      <h3>📸 3. Get Photo Proof</h3>
-      <p>Delivery photos available for verification.</p>
+    <div class="feature-card">
+      <h3>📸 Photo Confirmation</h3>
+      <p>Receive photo proof for verification on request.</p>
     </div>
-  </section>
+  </div>
 
-  <section class="map-container">
-    📍 <strong>Live Delivery Route</strong><br/><br/>
-    [Map loading... 📌]
-  </section>
+  <div class="upload-box">
+    <h3>📎 Upload Your Flyer Design</h3>
+    <input type="file" />
+  </div>
+
+  <div class="testimonials">
+    <h3>Trusted by Local Businesses</h3>
+    <div class="testimonial">"They helped me reach 1,200 homes in a single weekend!" – Local Gym</div>
+    <div class="testimonial">"Our flyers got real results – bookings doubled!" – Spa Owner</div>
+  </div>
+
+  <div class="map-placeholder">
+    📍 Live Delivery Route<br>
+    <small>[Map loading simulation placeholder]</small>
+  </div>
 
   <footer>
-    &copy; 2025 Doorstep Reach. All rights reserved.
+    <div>© 2025 Doorstep Reach</div>
+    <div>Privacy Policy</div>
+    <div>Terms of Service</div>
   </footer>
 
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Doorstep Reach</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-</head>
-<body>
-  <header>
-    <div class="logo">📬 Doorstep Reach</div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#how-it-works">How It Works</a>
-      <a href="#business">For Businesses</a>
-      <a href="#steppers">For Steppers</a>
-      <a href="#contact">Contact</a>
-      <select id="languageToggle">
-        <option value="en">🇺🇸 EN</option>
-        <option value="es">🇪🇸 ES</option>
-      </select>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <img src="https://cdn.pixabay.com/photo/2020/06/15/16/49/delivery-5301025_1280.jpg" alt="Delivery Man" class="hero-img" />
-    <div class="hero-text">
-      <h1>Get Flyers Delivered to Every Door</h1>
-      <p>Affordable, photo-confirmed flyer drops across Dallas neighborhoods.</p>
-      <button onclick="scrollToForm()">🚀 Get Started</button>
-    </div>
-  </section>
-
-  <section id="how-it-works">
-    <h2>How It Works</h2>
-    <div class="steps">
-      <div>
-        <h3>1. Upload Flyers</h3>
-        <p>Send your design or we can print them for you.</p>
-        <input type="file" id="fileInput" />
-      </div>
-      <div>
-        <h3>2. Steppers Deliver</h3>
-        <p>Flyers delivered door-to-door in your selected area.</p>
-      </div>
-      <div>
-        <h3>3. Get Photo Proof</h3>
-        <p>Delivery photos available for verification.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="map-section">
-    <h2>📍 Live Delivery Route</h2>
-    <div id="map-placeholder">[Map loading... 📌]</div>
-  </section>
-
-  <section id="trust">
-    <h2>⭐ Trusted by Local Businesses</h2>
-    <div class="badges">
-      <div class="badge">⭐⭐⭐ Verified Partner</div>
-      <div class="badge">🌟 Most Reliable</div>
-      <div class="badge">🏆 Top Rated Stepper</div>
-    </div>
-    <div class="testimonials">
-      <blockquote>"Doorstep Reach helped me reach 500 homes in one day!" – Local Realtor</blockquote>
-      <blockquote>"Affordable and fast – I got photo proof for each flyer drop!" – Lawn Care Biz</blockquote>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-nav">
-      <a href="#">Home</a>
-      <a href="#">FAQ</a>
-      <a href="#">For Businesses</a>
-      <a href="#">For Steppers</a>
-    </div>
-    <p>&copy; 2025 Doorstep Reach. All rights reserved.</p>
-  </footer>
 </body>
 </html>
