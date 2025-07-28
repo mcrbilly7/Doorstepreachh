@@ -1,188 +1,179 @@
-/* === Reset === */
+/* Base layout */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   background-color: #0f0f0f;
-  color: #f5f5f5;
+  color: #f1f1f1;
   line-height: 1.6;
 }
 
-/* === Header === */
+a {
+  color: #64b5f6;
+  text-decoration: none;
+}
+
 header {
+  background-color: #1a1a1a;
+  padding: 15px 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1a1a1a;
-  padding: 1.2rem 2rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  border-bottom: 1px solid #333;
 }
 
-.logo {
-  font-size: 1.8rem;
+header .logo {
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #00d084;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.2rem;
+header nav a {
+  margin: 0 10px;
+  font-size: 0.95rem;
 }
 
-nav ul li a {
-  color: #f5f5f5;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+header select {
+  background: #2a2a2a;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
 }
 
-nav ul li a:hover {
-  color: #00d084;
-}
-
-/* === Hero Section === */
+/* Hero section */
 .hero {
-  background: linear-gradient(135deg, #1f1f1f, #121212);
-  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(145deg, #121212, #1c1c1c);
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+.hero-img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px #111;
 }
 
-.hero p {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
   color: #ccc;
 }
 
-.cta {
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  background-color: #00d084;
-  color: #0f0f0f;
+.hero-text button {
+  padding: 10px 20px;
+  background-color: #64b5f6;
+  border: none;
+  color: #fff;
   font-weight: bold;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background 0.3s ease;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.cta:hover {
-  background-color: #00a26a;
+.hero-text button:hover {
+  background-color: #42a5f5;
 }
 
-/* === Trusted Logos === */
-.trusted {
-  padding: 3rem 2rem;
+/* Sections */
+section {
+  padding: 40px 20px;
+  border-top: 1px solid #2c2c2c;
+}
+
+h2 {
   text-align: center;
-}
-
-.trusted h2 {
-  margin-bottom: 1.5rem;
-}
-
-.logos {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.logos img {
-  height: 40px;
-  opacity: 0.8;
-}
-
-/* === How It Works === */
-.how-it-works {
-  background-color: #1a1a1a;
-  padding: 4rem 2rem;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
 }
 
 .steps {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-around;
-  text-align: center;
-}
-
-.step {
-  flex: 1 1 250px;
-  background-color: #252525;
-  padding: 2rem;
-  border-radius: 8px;
-}
-
-/* === Testimonials === */
-.testimonials {
-  padding: 4rem 2rem;
-}
-
-.testimonial-cards {
-  display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 20px;
 }
 
-.card {
-  background-color: #252525;
-  padding: 1.5rem;
-  border-radius: 8px;
+.steps div {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px #111;
+}
+
+#fileInput {
+  margin-top: 10px;
+  background-color: #2a2a2a;
+  color: #eee;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  width: 100%;
+}
+
+/* Map */
+#map-placeholder {
+  background-color: #222;
+  border: 2px dashed #444;
+  color: #aaa;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+/* Testimonials & Trust */
+.badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.badge {
+  background-color: #292929;
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border: 1px solid #444;
+}
+
+.testimonials blockquote {
+  margin: 10px auto;
+  max-width: 600px;
   font-style: italic;
+  color: #ccc;
+  border-left: 4px solid #64b5f6;
+  padding-left: 12px;
 }
 
-/* === About Section === */
-.about {
-  padding: 3rem 2rem;
-  background-color: #1a1a1a;
-  text-align: center;
-}
-
-/* === FAQ Section === */
-.faq {
-  padding: 3rem 2rem;
-}
-
-.faq details {
-  background-color: #252525;
-  padding: 1rem;
-  border-radius: 5px;
-  margin-bottom: 1rem;
-  cursor: pointer;
-}
-
-.faq summary {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-/* === Footer === */
+/* Footer */
 footer {
+  padding: 20px;
   background-color: #121212;
-  padding: 2rem;
   text-align: center;
+  border-top: 1px solid #2a2a2a;
+  margin-top: 40px;
 }
 
-footer a {
-  color: #00d084;
-  text-decoration: none;
+.footer-nav {
+  margin-bottom: 10px;
 }
 
-.cta-footer {
-  margin-bottom: 1.5rem;
+.footer-nav a {
+  margin: 0 10px;
+  font-size: 0.9rem;
 }
