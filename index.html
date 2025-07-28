@@ -1,160 +1,60 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Doorstep Reach</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }body {
-  background-color: #0e0e11;
-  color: #ffffff;
-}
-
-header {
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #121217;
-}
-
-header h1 {
-  font-size: 1.5rem;
-}
-
-nav a {
-  color: #fff;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.hero {
-  padding: 30px 20px;
-  text-align: center;
-}
-
-.hero h2 {
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 20px;
-}
-
-.hero-buttons button {
-  padding: 12px 20px;
-  margin: 10px;
-  border: none;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.hero-buttons .primary {
-  background-color: #2669ff;
-  color: white;
-}
-
-.hero-buttons .secondary {
-  background-color: #1c1c1c;
-  color: white;
-  border: 1px solid #444;
-}
-
-.how-it-works {
-  margin-top: 40px;
-  padding: 20px;
-  background-color: #0c0c0f;
-}
-
-.how-it-works h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.steps {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.step {
-  max-width: 200px;
-  margin: 15px;
-}
-
-.step img {
-  height: 40px;
-  margin-bottom: 10px;
-}
-
-footer {
-  margin-top: 40px;
-  padding: 15px;
-  display: flex;
-  justify-content: space-around;
-  background-color: #121217;
-  border-top: 1px solid #222;
-}
-
-footer a {
-  color: #999;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.active {
-  color: #2669ff;
-}
-
-  </style>
 </head>
 <body>
-  <header>
-    <h1>Doorstep Reach</h1>
+  <header class="navbar">
+    <h1 class="logo">Doorstep Reach</h1>
     <nav>
       <a href="#">Home</a>
       <a href="#">How It Works</a>
       <a href="#">About</a>
     </nav>
-  </header>  <section class="hero">
-    <h2>GET FLYERS<br />DELIVERED TO<br />EVERY DOOR</h2>
-    <div class="hero-buttons">
-      <button class="primary">Request Delivery</button>
-      <button class="secondary">Become a Stepper</button>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h2>GET FLYERS<br>DELIVERED TO<br>EVERY DOOR</h2>
+      <div class="buttons">
+        <a class="btn primary" href="#">Request Delivery</a>
+        <a class="btn secondary" href="#">Become a Stepper</a>
+      </div>
     </div>
-  </section>  <section class="how-it-works">
+  </section>
+
+  <section class="how-it-works">
     <h3>How It Works</h3>
     <div class="steps">
       <div class="step">
-        <img src="https://img.icons8.com/fluency/48/marker.png" alt="Request Delivery">
+        <img src="https://img.icons8.com/color/96/marker.png" alt="Request">
         <h4>Request Delivery</h4>
         <p>Submit a request and specify your target area for distribution.</p>
       </div>
       <div class="step">
-        <img src="https://img.icons8.com/fluency/48/walking.png" alt="Flyers Distributed">
+        <img src="https://img.icons8.com/color/96/walking.png" alt="Distribute">
         <h4>Flyers Distributed</h4>
         <p>A Stepper will deliver your flyers or business cards door-to-door.</p>
       </div>
       <div class="step">
-        <img src="https://img.icons8.com/fluency/48/camera.png" alt="Confirming Delivery">
+        <img src="https://img.icons8.com/color/96/camera.png" alt="Confirm">
         <h4>Confirming Delivery</h4>
         <p>Optional photo confirmation is available for each delivery.</p>
       </div>
     </div>
-  </section>  <footer>
-    <a class="active" href="#">Home</a>
-    <a href="#">FAQ</a>
-    <a href="#">For Businesses</a>
-    <a href="#">For Steppers</a>
+  </section>
+
+  <footer class="bottom-nav">
+    <a href="#" class="active">🏠 Home</a>
+    <a href="#">❓ FAQ</a>
+    <a href="#">💼 For Businesses</a>
+    <a href="#">🧍 For Steppers</a>
   </footer>
 </body>
 </html>
