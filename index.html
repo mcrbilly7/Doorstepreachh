@@ -1,59 +1,160 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Doorstep Reach</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }body {
+  background-color: #0e0e11;
+  color: #ffffff;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #121217;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hero-buttons button {
+  padding: 12px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.hero-buttons .primary {
+  background-color: #2669ff;
+  color: white;
+}
+
+.hero-buttons .secondary {
+  background-color: #1c1c1c;
+  color: white;
+  border: 1px solid #444;
+}
+
+.how-it-works {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #0c0c0f;
+}
+
+.how-it-works h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.step {
+  max-width: 200px;
+  margin: 15px;
+}
+
+.step img {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #121217;
+  border-top: 1px solid #222;
+}
+
+footer a {
+  color: #999;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.active {
+  color: #2669ff;
+}
+
+  </style>
 </head>
 <body>
-  <header class="header">
-    <h1>🚪 Doorstep Reach</h1>
+  <header>
+    <h1>Doorstep Reach</h1>
     <nav>
-      <a href="#how">How It Works</a>
-      <a href="#business">For Businesses</a>
-      <a href="#stepper">Become a Stepper</a>
-      <a href="#contact">Contact</a>
+      <a href="#">Home</a>
+      <a href="#">How It Works</a>
+      <a href="#">About</a>
     </nav>
-  </header>
-
-  <section class="hero">
-    <h2>Your Flyers. Their Doorsteps.</h2>
-    <p>We deliver your business straight to the neighborhood — fast, efficient, and trackable.</p>
-    <a href="#business" class="cta">Start Delivering Today</a>
-  </section>
-
-  <section id="how" class="steps">
-    <h3>📦 How It Works</h3>
-    <div class="step-list">
-      <div class="step">1. Choose your area</div>
-      <div class="step">2. Upload your flyer</div>
-      <div class="step">3. Our steppers deliver door to door</div>
-      <div class="step">4. Get photo proof & live updates</div>
+  </header>  <section class="hero">
+    <h2>GET FLYERS<br />DELIVERED TO<br />EVERY DOOR</h2>
+    <div class="hero-buttons">
+      <button class="primary">Request Delivery</button>
+      <button class="secondary">Become a Stepper</button>
     </div>
-  </section>
-
-  <section id="business" class="business">
-    <h3>💼 For Businesses</h3>
-    <p>Whether you're a landscaper, real estate agent, or local shop — Doorstep Reach helps you scale your presence, one door at a time.</p>
-    <a class="cta-alt" href="#">Create Business Account</a>
-  </section>
-
-  <section id="stepper" class="stepper">
-    <h3>🚶‍♂️ Become a Stepper</h3>
-    <p>Earn money walking around your neighborhood. Set your schedule. Get paid per delivery.</p>
-    <a class="cta-alt" href="#">Sign Up to Deliver</a>
-  </section>
-
-  <section id="contact" class="contact">
-    <h3>📬 Contact Us</h3>
-    <p>Email: <a href="mailto:doorstepreach@gmail.com">doorstepreach@gmail.com</a></p>
-  </section>
-
-  <footer class="footer">
-    <p>&copy; 2025 Doorstep Reach. All rights reserved.</p>
+  </section>  <section class="how-it-works">
+    <h3>How It Works</h3>
+    <div class="steps">
+      <div class="step">
+        <img src="https://img.icons8.com/fluency/48/marker.png" alt="Request Delivery">
+        <h4>Request Delivery</h4>
+        <p>Submit a request and specify your target area for distribution.</p>
+      </div>
+      <div class="step">
+        <img src="https://img.icons8.com/fluency/48/walking.png" alt="Flyers Distributed">
+        <h4>Flyers Distributed</h4>
+        <p>A Stepper will deliver your flyers or business cards door-to-door.</p>
+      </div>
+      <div class="step">
+        <img src="https://img.icons8.com/fluency/48/camera.png" alt="Confirming Delivery">
+        <h4>Confirming Delivery</h4>
+        <p>Optional photo confirmation is available for each delivery.</p>
+      </div>
+    </div>
+  </section>  <footer>
+    <a class="active" href="#">Home</a>
+    <a href="#">FAQ</a>
+    <a href="#">For Businesses</a>
+    <a href="#">For Steppers</a>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
