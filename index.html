@@ -2,105 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Doorstep Reach</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
-    <div class="logo">🚪 Doorstep Reach</div>
+    <div class="logo">📬 Doorstep Reach</div>
     <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">How It Works</a></li>
-        <li><a href="#">For Businesses</a></li>
-        <li><a href="#">For Steppers</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+      <a href="#">Home</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#business">For Businesses</a>
+      <a href="#steppers">For Steppers</a>
+      <a href="#contact">Contact</a>
+      <select id="languageToggle">
+        <option value="en">🇺🇸 EN</option>
+        <option value="es">🇪🇸 ES</option>
+      </select>
     </nav>
   </header>
 
   <section class="hero">
+    <img src="https://cdn.pixabay.com/photo/2020/06/15/16/49/delivery-5301025_1280.jpg" alt="Delivery Man" class="hero-img" />
     <div class="hero-text">
-      <h1>Flyer Delivery Reinvented</h1>
-      <p>Hyperlocal, affordable, and photo-confirmed flyer drops in Dallas</p>
-      <a href="#" class="cta">Get Started</a>
+      <h1>Get Flyers Delivered to Every Door</h1>
+      <p>Affordable, photo-confirmed flyer drops across Dallas neighborhoods.</p>
+      <button onclick="scrollToForm()">🚀 Get Started</button>
     </div>
   </section>
 
-  <section class="trusted">
-    <h2>Trusted By Local Businesses</h2>
-    <div class="logos">
-      <img src="img/logo1.png" alt="Business 1"/>
-      <img src="img/logo2.png" alt="Business 2"/>
-      <img src="img/logo3.png" alt="Business 3"/>
-    </div>
-  </section>
-
-  <section class="how-it-works">
+  <section id="how-it-works">
     <h2>How It Works</h2>
     <div class="steps">
-      <div class="step">
-        <h3>📥 1. Upload Flyers</h3>
-        <p>Send us your design or let us print & prep them for you.</p>
+      <div>
+        <h3>1. Upload Flyers</h3>
+        <p>Send your design or we can print them for you.</p>
+        <input type="file" id="fileInput" />
       </div>
-      <div class="step">
-        <h3>🚶 2. Our Steppers Deliver</h3>
-        <p>Flyers are dropped at every doorstep in your selected area.</p>
+      <div>
+        <h3>2. Steppers Deliver</h3>
+        <p>Flyers delivered door-to-door in your selected area.</p>
       </div>
-      <div class="step">
-        <h3>📸 3. Get Photo Proof</h3>
-        <p>If selected, steppers provide photos for each delivery for verification.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonials">
-    <h2>What Businesses Are Saying</h2>
-    <div class="testimonial-cards">
-      <div class="card">
-        <p>"Amazing service! We doubled local foot traffic in 2 weeks!"</p>
-        <h4>– Sarah, Local Boutique</h4>
-      </div>
-      <div class="card">
-        <p>"The photo proof feature makes all the difference. 5 stars."</p>
-        <h4>– David, Real Estate Agent</h4>
+      <div>
+        <h3>3. Get Photo Proof</h3>
+        <p>Delivery photos available for verification.</p>
       </div>
     </div>
   </section>
 
-  <section class="about">
-    <h2>About Doorstep Reach</h2>
-    <p>Started by an 18-year-old from Dallas, Doorstep Reach is revolutionizing the way businesses reach local homes. We offer efficient, reliable, and trackable flyer delivery services powered by real people from your community.</p>
+  <section id="map-section">
+    <h2>📍 Live Delivery Route</h2>
+    <div id="map-placeholder">[Map loading... 📌]</div>
   </section>
 
-  <section class="faq">
-    <h2>Frequently Asked Questions</h2>
-    <details>
-      <summary>How do I know my flyers were delivered?</summary>
-      <p>Steppers optionally take photos at each door and we log routes automatically.</p>
-    </details>
-    <details>
-      <summary>Where do you operate?</summary>
-      <p>We currently serve all neighborhoods across the Dallas, TX metro area.</p>
-    </details>
-    <details>
-      <summary>How much does it cost?</summary>
-      <p>Rates start at 20¢ per door and vary based on neighborhood and delivery time.</p>
-    </details>
+  <section id="trust">
+    <h2>⭐ Trusted by Local Businesses</h2>
+    <div class="badges">
+      <div class="badge">⭐⭐⭐ Verified Partner</div>
+      <div class="badge">🌟 Most Reliable</div>
+      <div class="badge">🏆 Top Rated Stepper</div>
+    </div>
+    <div class="testimonials">
+      <blockquote>"Doorstep Reach helped me reach 500 homes in one day!" – Local Realtor</blockquote>
+      <blockquote>"Affordable and fast – I got photo proof for each flyer drop!" – Lawn Care Biz</blockquote>
+    </div>
   </section>
 
   <footer>
-    <div class="cta-footer">
-      <h2>Ready to Reach More Homes?</h2>
-      <a href="#" class="cta">Join Now</a>
+    <div class="footer-nav">
+      <a href="#">Home</a>
+      <a href="#">FAQ</a>
+      <a href="#">For Businesses</a>
+      <a href="#">For Steppers</a>
     </div>
-    <div class="footer-info">
-      <p>&copy; 2025 Doorstep Reach. All rights reserved.</p>
-      <p>Contact: <a href="mailto:doorstepreach@gmail.com">doorstepreach@gmail.com</a></p>
-    </div>
+    <p>&copy; 2025 Doorstep Reach. All rights reserved.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
