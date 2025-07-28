@@ -2,6 +2,200 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Doorstep Reach</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 32px;
+      background-color: #000;
+      border-bottom: 1px solid #222;
+    }
+
+    header .logo {
+      font-weight: bold;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #ccc;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .language-select {
+      background-color: #222;
+      color: white;
+      border: none;
+      padding: 4px 8px;
+      border-radius: 4px;
+      margin-left: 10px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero img {
+      width: 240px;
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: 32px;
+      margin: 0 0 12px;
+    }
+
+    .hero p {
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    .hero button {
+      padding: 12px 24px;
+      margin: 5px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .get-started {
+      background-color: #3b82f6;
+      color: white;
+    }
+
+    .how-it-works {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .how-it-works h2 {
+      margin-bottom: 20px;
+    }
+
+    .step {
+      background: #1a1a1a;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 500px;
+      border-radius: 10px;
+      text-align: left;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    .step h3 {
+      margin-top: 0;
+    }
+
+    .file-upload input {
+      margin-top: 8px;
+      padding: 6px;
+      background: #222;
+      border: 1px solid #555;
+      color: #fff;
+      width: 100%;
+    }
+
+    .map-container {
+      background: #1c1c1c;
+      text-align: center;
+      padding: 30px;
+      margin: 40px 20px;
+      border-radius: 12px;
+      font-size: 18px;
+      border: 1px solid #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      border-top: 1px solid #222;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">📬 Doorstep Reach</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">How It Works</a>
+      <a href="#">For Businesses</a>
+      <a href="#">For Steppers</a>
+      <a href="#">Contact</a>
+      <select class="language-select">
+        <option value="en">🇺🇸 EN</option>
+        <option value="es">🇪🇸 ES</option>
+      </select>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Delivery_man.jpg/640px-Delivery_man.jpg" alt="Delivery Man"/>
+    <h1>Get Flyers Delivered to Every Door</h1>
+    <p>Affordable, photo-confirmed flyer drops across Dallas neighborhoods.</p>
+    <button class="get-started">🚀 Get Started</button>
+  </section>
+
+  <section class="how-it-works">
+    <h2>How It Works</h2>
+
+    <div class="step">
+      <h3>📤 1. Upload Flyers</h3>
+      <p>Send your design or let us print them for you.</p>
+      <div class="file-upload">
+        <input type="file"/>
+      </div>
+    </div>
+
+    <div class="step">
+      <h3>🚪 2. Steppers Deliver</h3>
+      <p>Flyers delivered door-to-door in your selected area.</p>
+    </div>
+
+    <div class="step">
+      <h3>📸 3. Get Photo Proof</h3>
+      <p>Delivery photos available for verification.</p>
+    </div>
+  </section>
+
+  <section class="map-container">
+    📍 <strong>Live Delivery Route</strong><br/><br/>
+    [Map loading... 📌]
+  </section>
+
+  <footer>
+    &copy; 2025 Doorstep Reach. All rights reserved.
+  </footer>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Doorstep Reach</title>
   <link rel="stylesheet" href="style.css" />
